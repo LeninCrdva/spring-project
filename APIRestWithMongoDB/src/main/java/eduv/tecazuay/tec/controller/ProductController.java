@@ -20,7 +20,7 @@ import eduv.tecazuay.tec.service.ProductServiceImpl;
 
 @RestController
 @RequestMapping("/api/product")
-@CrossOrigin(origins = {"http://localhost:3000", "https://spring-project-production.up.railway.app"})
+@CrossOrigin(origins = "*")
 public class ProductController {
 	@Autowired
 	private ProductServiceImpl productServiceImp;
@@ -48,8 +48,6 @@ public class ProductController {
 		currentProduct.setProductName(product.getProductName());
 		currentProduct.setPrice(product.getPrice());
 		currentProduct.setExpiryDate(product.getExpiryDate());
-
-		//return productRepository.save(currentProduct);
 
 		return ResponseEntity.status(HttpStatus.OK).body(productServiceImp.save(currentProduct));
 	}

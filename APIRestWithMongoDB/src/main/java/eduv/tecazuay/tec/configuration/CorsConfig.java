@@ -1,7 +1,5 @@
 package eduv.tecazuay.tec.configuration;
 
-//Configuración de CORS en una clase Java
-
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.cors.CorsConfiguration;
@@ -16,7 +14,6 @@ public class CorsConfig {
      UrlBasedCorsConfigurationSource source = new UrlBasedCorsConfigurationSource();
      CorsConfiguration config = new CorsConfiguration();
 
-     // Permitir solicitudes desde todas las fuentes (ajusta según tus necesidades)
      config.addAllowedOrigin("*");
 
      // Permitir solicitudes con los métodos GET, POST, PUT, DELETE, etc.
